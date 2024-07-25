@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Business_Size__c</fullName>
+    <label>Product Business Size</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Small</fullName>
+                <default>false</default>
+                <label>Small</label>
+            </value>
+            <value>
+                <fullName>Mid-Market</fullName>
+                <default>false</default>
+                <label>Mid-Market</label>
+            </value>
+            <value>
+                <fullName>Enterprise</fullName>
+                <default>false</default>
+                <label>Enterprise</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

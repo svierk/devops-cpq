@@ -31,11 +31,7 @@ jobs:
           alias: cpq-org
       - name: CPQ Metadata Deployment
         run: sf project deploy start
-      - name: CPQ Data Import
-        uses: svierk/sfdx-data-import@main
-        with:
-          file-path: './data/accounts.csv'
-          object-type: 'Account'
-          external-id: 'Id'
-          target-org: cpq-org
-
+      - name: CPQ Data import
+        run: |
+          sf data upsert bulk --sobject SBQQ__ProductFeature__c --file ./data/SBQQ__ProductFeature__c.csv --external-id Id --wait 5 --target-org cpq-org
+          sf data upsert bulk --sobject SBQQ__ProductOption__c --file ./data/SBQQ__ProductOption__c.csv --external-id Id --wait 5 --target-org cpq-org

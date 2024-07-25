@@ -34,3 +34,4 @@ jobs:
       - name: CPQ Data import
         run: |
           sf data upsert bulk --sobject SBQQ__ProductFeature__c --file ./data/SBQQ__ProductFeature__c.csv --external-id Id --wait 5 --target-org cpq-org
+          sf data upsert bulk --sobject SBQQ__ProductOption__c --file ./data/SBQQ__ProductOption__c.csv --external-id Id --wait 5 --target-org cpq-org
